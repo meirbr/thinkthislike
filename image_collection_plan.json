@@ -1,0 +1,19 @@
+{
+    "image collection": [
+        {
+        "key": 1,
+        "number_on_coverflow": 1,
+        "src": "address_to_store"
+        },
+        {
+            "key": 2,
+            "number_on_coverflow": "no",
+            "src": "address_to_store"
+        },
+        {
+            "key": 3,
+            "number_on_coverflow": "no",
+            "src": "address_to_store"
+        }
+    ]
+}

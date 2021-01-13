@@ -1,0 +1,2 @@
+https://developer.aliyun.com/mirror/npm/package/coverflow-reactjs
+כדאי לנסות להוסיף לאתר

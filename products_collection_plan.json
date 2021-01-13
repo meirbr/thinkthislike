@@ -1,0 +1,32 @@
+{
+    "products_collection": [
+        {
+        "product_number": 1,
+        "serial_number": 1,
+        "number_on_coverflow": 1,
+        "price": 1,
+        "title": "Shoes Boots for Men",
+        "Second_title": "All sizes shoes for men",
+        "content": "address of content and styled html",
+        "images_src": [{"main_picture": "address1"}, "address2", "address3"],
+        "categories": ["sagittirius", "gifts", "astrology"],
+        "comments": [
+            {
+                "comment_number": 1,
+                "wrote_by": "saggitarius",
+                "rated": 5,
+                "content": "Love it.",
+                "date": "27/12/2020"
+            },
+            {
+                "comment_number": 2,
+                "wrote_by": "virgin",
+                "rated": 1,
+                "content": "It sucks.",
+                "date": "27/12/2020"
+            }
+        ],
+        "ratings_without_comment": [5, 3, 7]
+        }
+    ]
+}

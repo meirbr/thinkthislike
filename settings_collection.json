@@ -1,0 +1,42 @@
+{
+    "settings_collection": [
+        {
+            "comment_settings": [
+                {
+                    "fields_to_fill": 
+                        {
+                        "name": "string",
+                        "type_of_replier": "string",
+                        "rating": "integer",
+                        "avatar": "string_of_src"
+                        }
+                },
+                {
+                "how_many_to_show_in_page": "integer",
+                "date": "date",
+                "font_color_name": "string",
+                "font_color_date": "string",
+                "font_color_content": "string",
+                "content": "string",
+                "types_of_replier": ["Aries", "Taurus", "Gemini", "Cancer", 
+                "Leo", "Virgo", "Libra", "Scropio", "Sagittarius","Capricorn",
+                "Aquarius", "Pisces"],
+                "avatars": 
+                    {
+                        "all": ["string_src", "string_src", "string_src"],
+                        "Aries": ["string_src", "string_src", "string_src"],
+                        "Taurus": ["string_src", "string_src", "string_src"]
+                    }
+                }
+            ]
+        },
+        {"users_settings": {
+            "username": "string",
+            "password": "string",
+            "email": "string",
+            "can_edit": true,
+            "can_delete": true,
+            "full_permissions": true
+        }}
+    ]
+}

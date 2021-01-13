@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "name": "react-ssr-jsx-starter",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "cross-env NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@react-ssr/core": "^0.21.18",
+    "@react-ssr/express": "^0.21.18",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "express": "^4.17.1",
+    "framer-motion": "^3.2.0",
+    "jsdom": "^16.4.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.0",
+    "react-bootstrap": "^1.4.0",
+    "react-coverflow": "^0.2.20",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "images": [
+        { "key": 1, "url": "img/astrology/003-aries.svg", "alt": "מזל טלה"  },
+        { "key": 2, "url": "img/astrology/035-virgo.svg", "alt": "מזל בתולה"  },
+        { "key": 3, "url": "img/astrology/005-baphomet.svg", "alt": "זה לא מזל"  },
+        { "key": 4, "url": "img/astrology/008-cancer.svg", "alt": "מזל סרטן"  },
+        { "key": 5, "url": "img/astrology/014-gemini.svg", "alt": "מזל רע"  },
+        { "key": 6, "url": "img/astrology/024-sagittarius.svg", "alt": "מזל קשת" }
+      ]
+}
