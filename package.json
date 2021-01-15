@@ -6,8 +6,8 @@
     "start": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
+    "@react-icons/all-files": "^4.1.0",
     "@react-ssr/core": "^0.21.18",
     "@react-ssr/express": "^0.21.18",
     "axios": "^0.21.1",
@@ -16,6 +16,7 @@
     "express": "^4.17.1",
     "framer-motion": "^3.2.0",
     "jsdom": "^16.4.0",
+    "mongodb": "^3.6.3",
     "node-sass": "^4.14.1",
     "react": "^16.13.0",
     "react-bootstrap": "^1.4.0",

@@ -33,6 +33,7 @@ General Stuff
   align-items: right;
   align-content: right;
   align-content: right;
+  direction: rtl;
 }
 
 .cntr {
@@ -47,14 +48,26 @@ General Stuff
   background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='#f8f9fb' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
 
-.hide-pc {
+.hide-on-mobile {
   display: block;
+}
+
+.hide-on-pc {
+  display: none;
 }
 
 @media (max-width: 320px) {
   .nvbr-rspnsv {
     background-color: transparent;
     position: fixed;
+  }
+
+  .hide-on-pc {
+    display: block;
+  }
+
+  .hide-on-mobile {
+    display: none;
   }
 }
 
@@ -63,12 +76,28 @@ General Stuff
     background-color: transparent;
     position: fixed;
   }
+
+  .hide-on-pc {
+    display: block;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) and (min-width: 480px) {
   .nvbr-rspnsv {
     background-color: transparent;
     position: fixed;
+  }
+
+  .hide-on-pc {
+    display: block;
+  }
+
+  .hide-on-mobile {
+    display: none;
   }
 }
 
@@ -78,7 +107,11 @@ General Stuff
     position: fixed;
   }
 
-  .hide-pc {
+  .hide-on-pc {
+    display: block;
+  }
+
+  .hide-on-mobile {
     display: none;
   }
 }
@@ -119,10 +152,18 @@ index
   background-size: cover;
   background-position-x: center;
   position: relative;
+  background-attachment: fixed;
 }
 
 .intro-wlcm {
-  padding: 10vh;
+  padding: auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  text-align: justify;
+  text-align-last: center;
+  padding-right: 25vh;
+
   img {
     height: 40vh;
   }
@@ -209,7 +250,8 @@ index
   }
 
   .intro-wlcm {
-    padding: 10vh;
+    padding: none;
+    width: 100vh;
     img {
       height: 10vh;
     }
@@ -236,10 +278,11 @@ index
 @media (max-width: 480px) and (min-width: 320px) {
   .intro {
     height: 100vh;
+    width: 100vh;
   }
 
   .crsl {
-    padding-top: 20vh;
+    padding-top: none;
   }
 }
 
@@ -249,7 +292,7 @@ index
   }
 
   .crsl {
-    padding-top: 20vh;
+    padding-top: none;
   }
 }
 
@@ -263,6 +306,212 @@ index
   .intro {
     height: 100vh;
   }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 900px) {
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+}
+
+/*
+--------------
+--------------
+Login
+--------------
+--------------
+*/
+
+.login {
+  background-image: url("https://images.unsplash.com/photo-1445905595283-21f8ae8a33d2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  position: relative;
+  background-attachment: fixed;
+  align-items: center;
+}
+
+.login-form {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  margin: none;
+  color: $deepBlue;
+  font-size: 24px;
+  font-family: Heebo, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 100%;
+  margin: 0;
+}
+
+.login-wlcm {
+  padding: 10vh;
+  height: 90.8vh;
+  margin: none;
+  display: flex;
+  margin: 0;
+
+  form {
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    background-color: $offWhite;
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+  button {
+    background-color: $classicBlue;
+    border: 0;
+    align-self: center;
+    margin: auto;
+  }
+
+  button:hover {
+    background-color: $brightBlue;
+  }
+
+  button:focus {
+    background-color: $brightBlue;
+  }
+
+  button:active {
+    background-color: $brightBlue;
+  }
+
+  img {
+    height: 10vh;
+  }
+
+  .form-img {
+    height: 10vh;
+  }
+
+  .margins-of-form {
+    background-color: $deepBlue;
+    text-align: justify;
+    text-align-last: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    direction: rtl;
+    height: 70vh;
+    margin: 0;
+
+    img {
+      height: 30vh;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: $offWhite;
+      font-family: heebo, Arial, Helvetica, sans-serif;
+      text-align-last: center;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: $offWhiteTwo;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .login {
+    height: 100vh;
+  }
+
+  .login-wlcm {
+    padding: 10vh;
+
+    img {
+      height: 10vh;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      display: none;
+    }
+
+    h3 {
+      display: none;
+    }
+    p {
+      font-size: 16px;
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .login {
+    height: 100vh;
+  }
+
+  .login {
+    padding-top: 20vh;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 480px) {
+  .login {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .login {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+  .login {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 900px) {
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1024px) {
+}
+
+/*
+--------------
+--------------
+Footer
+--------------
+--------------
+*/
+
+.footer {
+  color: $pinkSolid;
+  direction: rtl;
+  position: sticky;
+
+  p {
+    color: $pinkSolid;
+    direction: rtl;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+}
+
+@media (max-width: 600px) and (min-width: 480px) {
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
 }
 
 @media screen and (max-width: 1024px) and (min-width: 900px) {

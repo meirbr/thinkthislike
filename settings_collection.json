@@ -8,6 +8,7 @@
                         "name": "string",
                         "type_of_replier": "string",
                         "rating": "integer",
+                        "content": "string",
                         "avatar": "string_of_src"
                         }
                 },
@@ -17,7 +18,6 @@
                 "font_color_name": "string",
                 "font_color_date": "string",
                 "font_color_content": "string",
-                "content": "string",
                 "types_of_replier": ["Aries", "Taurus", "Gemini", "Cancer", 
                 "Leo", "Virgo", "Libra", "Scropio", "Sagittarius","Capricorn",
                 "Aquarius", "Pisces"],

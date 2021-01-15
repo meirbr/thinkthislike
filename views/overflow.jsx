@@ -16,7 +16,7 @@ class Overflow extends React.Component {
       //for just function
     }
     return (
-      <div>
+      <div style={{direction: "ltr", paddingLeft: "5vh"}}>
         <Coverflow
     width={960}
     height={480}

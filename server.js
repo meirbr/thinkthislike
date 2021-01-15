@@ -1,6 +1,7 @@
 var todoModule = require('./Controller/todoModule.js');
 var reminderOneModule = require('./Controller/ReminderOneModule.js');
 var index = require('./Controller/index.js');
+var login= require('./Controller/login.js');
 
 const express = require('express');
 const register = require('@react-ssr/express/register');
@@ -13,8 +14,11 @@ app.use(express.static('./public/assets'));
 
 reminderOneModule(app);
 todoModule(app);
+login(app);
 
-await index(app);
+//always put last
+index(app);
+
 
   app.listen(3000, () => {
     console.log('> Ready on http://localhost:3000');
