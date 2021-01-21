@@ -4,13 +4,17 @@ var index = require('./Controller/index.js');
 var login= require('./Controller/login.js');
 
 const express = require('express');
+var cors = require('cors');
 const register = require('@react-ssr/express/register');
 const app = express();
 app.use(express.static('./public/assets'));
+app.use(cors());
 
 
 (async () => {
   await register(app);
+
+
 
 reminderOneModule(app);
 todoModule(app);

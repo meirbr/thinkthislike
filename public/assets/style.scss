@@ -252,6 +252,7 @@ index
   .intro-wlcm {
     padding: none;
     width: 100vh;
+    padding-top: 10vh;
     img {
       height: 10vh;
     }
@@ -284,6 +285,32 @@ index
   .crsl {
     padding-top: none;
   }
+
+  .intro-wlcm {
+    padding: none;
+    width: 100vh;
+    padding-top: 10vh;
+    img {
+      height: 10vh;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      display: none;
+    }
+
+    h3 {
+      display: none;
+    }
+    p {
+      font-size: 16px;
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 600px) and (min-width: 480px) {
@@ -294,11 +321,63 @@ index
   .crsl {
     padding-top: none;
   }
+
+  .intro-wlcm {
+    padding: none;
+    width: 100vh;
+    padding-top: 10vh;
+    img {
+      height: 10vh;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      display: none;
+    }
+
+    h3 {
+      display: none;
+    }
+    p {
+      font-size: 16px;
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) and (min-width: 600px) {
   .intro {
     height: 100vh;
+  }
+
+  .intro-wlcm {
+    padding: none;
+    width: 100vh;
+    padding-top: 10vh;
+    img {
+      height: 10vh;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      display: none;
+    }
+
+    h3 {
+      display: none;
+    }
+    p {
+      font-size: 16px;
+      display: none;
+    }
   }
 }
 
@@ -327,46 +406,32 @@ Login
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
-  position: relative;
   background-attachment: fixed;
+  display: flex;
+  position: relative;
   align-items: center;
-}
-
-.login-form {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  height: 70vh;
-  margin: none;
-  color: $deepBlue;
-  font-size: 24px;
-  font-family: Heebo, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  width: 100%;
-  margin: 0;
 }
 
 .login-wlcm {
-  padding: 10vh;
-  height: 90.8vh;
-  margin: none;
-  display: flex;
-  margin: 0;
+  height: 92vh;
 
   form {
+    background-color: $offWhite;
+    align-content: center;
     text-align: center;
     align-items: center;
-    margin: 0;
-    background-color: $offWhite;
-    position: relative;
+    align-self: center;
     display: flex;
-    width: 100%;
+    font-size: 26px;
+    height: 100%;
   }
 
   button {
     background-color: $classicBlue;
     border: 0;
     align-self: center;
-    margin: auto;
+    margin-top: 1vh;
+    width: 100%;
   }
 
   button:hover {
@@ -383,6 +448,7 @@ Login
 
   img {
     height: 10vh;
+    align-self: center;
   }
 
   .form-img {
@@ -391,89 +457,97 @@ Login
 
   .margins-of-form {
     background-color: $deepBlue;
-    text-align: justify;
-    text-align-last: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
     direction: rtl;
-    height: 70vh;
-    margin: 0;
 
     img {
       height: 30vh;
     }
 
     h1 {
-      font-size: 28px;
       color: $offWhite;
       font-family: heebo, Arial, Helvetica, sans-serif;
       text-align-last: center;
+      align-self: center;
+      text-align: center;
     }
 
     h3 {
-      font-size: 24px;
-      color: $offWhiteTwo;
+      color: $offWhite;
+      font-family: heebo, Arial, Helvetica, sans-serif;
+      text-align-last: center;
+      align-self: center;
+      text-align: center;
     }
   }
 }
 
 @media (max-width: 320px) {
-  .login {
-    height: 100vh;
-  }
-
   .login-wlcm {
-    padding: 10vh;
-
-    img {
-      height: 10vh;
-    }
-
-    h1 {
-      font-size: 20px;
-    }
-
-    h2 {
-      font-size: 18px;
-      display: none;
-    }
-
-    h3 {
-      display: none;
-    }
-    p {
-      font-size: 16px;
-      display: none;
+    padding: 0;
+    form {
+      background-color: $offWhite;
+      margin: 0;
+      height: 100%;
+      align-content: center;
+      text-align: center;
+      align-items: center;
+      align-self: center;
+      display: flex;
     }
   }
 }
 
 @media (max-width: 480px) and (min-width: 320px) {
-  .login {
-    height: 100vh;
-  }
-
-  .login {
-    padding-top: 20vh;
+  .login-wlcm {
+    padding: 0;
+    form {
+      background-color: $offWhite;
+      margin: 0;
+      height: 100%;
+      align-content: center;
+      text-align: center;
+      align-items: center;
+      align-self: center;
+      display: flex;
+    }
   }
 }
 
 @media (max-width: 600px) and (min-width: 480px) {
-  .login {
-    height: 100vh;
+  .login-wlcm {
+    padding: 0;
+    form {
+      background-color: $offWhite;
+      margin: 0;
+      height: 100%;
+      align-content: center;
+      text-align: center;
+      align-items: center;
+      align-self: center;
+      display: flex;
+    }
   }
 }
 
 @media screen and (max-width: 768px) and (min-width: 600px) {
-  .login {
-    height: 100vh;
+  .login-wlcm {
+    padding: 0;
+    form {
+      background-color: $offWhite;
+      margin: 0;
+      height: 100%;
+      align-content: center;
+      text-align: center;
+      align-items: center;
+      align-self: center;
+      display: flex;
+    }
   }
 }
 
 @media screen and (max-width: 990px) and (min-width: 768px) {
-  .login {
-    height: 100vh;
+  .login-wlcm {
+    padding: 0;
   }
 }
 

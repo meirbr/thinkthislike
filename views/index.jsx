@@ -10,6 +10,8 @@ import Coverflow from './overflow';
 import HotProducts from './hotproducts'
 import { motion } from "framer-motion"
 import Footer from './footer';
+import ParticleImg from './partical-img.tsx';
+
 
 class Index extends React.Component{
     constructor(props){
@@ -18,7 +20,7 @@ class Index extends React.Component{
     }
 
 render(){
-  
+
   return (
     <React.Fragment className="rtl">
       <Head>
@@ -31,7 +33,10 @@ render(){
         <RB.Col className="intro-wlcm rtl">
           <RB.Container>
             <RB.Row>
+              <ParticleImg />
+              { /*}
           <motion.img animate={{ opacity: 1, y: 0 }} initial={{opacity: 0, y: 5}} transition={{delay: 0.5}} src="img/owl.svg" />
+  */}
           </RB.Row><RB.Row>
           <motion.h1 animate={{ opacity: 1 }} initial={{opacity: 0}} transition={{delay: 0.5, duration: 2}} >תחשוב על זה ככה</motion.h1>
           </RB.Row><RB.Row>

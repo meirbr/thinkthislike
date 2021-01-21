@@ -10,9 +10,13 @@ import axios from 'axios';
 class Login extends React.Component{
     constructor(props){
       super(props);
-      this.state = {}
+      this.state = {details: {username: '', password: ''},
+      isVerified: true
+      }
 
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleChangeUsername = this.handleChangeUsername.bind(this);
+      this.handleChangePassword = this.handleChangePassword.bind(this);
     }
 
     componentDidMount(){
@@ -23,21 +27,31 @@ class Login extends React.Component{
     handleSubmit(event){
       event.preventDefault();
       console.log("submitted");
-
+      var newThis = this;
       axios({
         method: 'post',
         url: '/login',
         data: {
-          item: "this.state.task"
+          details: this.state.details
         }
       })
-      .then(function(response) {
-        if(response.data.isVerified === true)
+      .then(function(res) {
+        if(res.data.result === true) //needs changing
         window.location = '/index';
-        else
-        console.log(reponse.data);
+        else{
+          console.log(res);
+          newThis.setState({isVerified: false});
+        }
       });
     }
+
+    handleChangeUsername(event) {
+      this.setState({details: {username: event.target.value, password: this.state.details.password}});
+    }
+
+    handleChangePassword(event) {
+      this.setState({details: {username: this.state.details.username , password: event.target.value}});
+    } 
 
 render(){
   return (
@@ -46,31 +60,36 @@ render(){
         <title>התחבר</title>
       </Head>
       <Nav/>
-      <RB.Container fluid className="login rtl">
-        <RB.Row xs="2" className="login-wlcm rtl">
-        <RB.Col className="rtl">
+      <div className="intro rtl">
+      <RB.Container>
+        <RB.Row className="login-wlcm">
+          <RB.Col sm className="form">
         <RB.Form onSubmit={this.handleSubmit}>
-          <div className="login-form">
+          <div style={{display: "block", alignItems: "center", margin: "auto"}}>
           <RB.FormLabel>שם משתמש/טלפון/אימייל:</RB.FormLabel>
-          <input type="text" id="username" name="username" />
+          <br />
+          <input type="text" placeholder={this.state.details.username} id="username" name="username" onChange={this.handleChangeUsername} required/>
+          <br />
           <RB.FormLabel>סיסמה:</RB.FormLabel>
-          <input type="text" id="username" name="username" />
-      <RB.Button type="submit" value="submit">התחבר</RB.Button></div>
+          <br />
+          <input type="text" id="username" name="username" onChange={this.handleChangePassword} required />
+      <br />
+      <RB.Button type="submit" value="submit">התחבר</RB.Button>
+      <br />
+      <label id="is_valid">{this.state.isVerified ? "" : "please check your details"}</label>
+      </div>
     </RB.Form>
-          </RB.Col>
-          <RB.Col className="margins-of-form hide-on-md">
-            <RB.Container className="margins-of-form">
-            <RB.Row>
-            <img src="http://localhost:3000/img/owl.svg" className="form-img" />
+    </RB.Col>
+          <RB.Col sm className="margins-of-form hide-on-mobile" style={{justifyContent: "center"}}>
+            <img src="http://localhost:3000/img/owl.svg" style={{width: "10vh", margin: "auto"}}/>
+            <br />
             <h1>כניסת מנהל</h1>
-            </RB.Row><RB.Row>
+            <br />
             <h3>אתר מבית "תחשוב על זה ככה"</h3>
-            </RB.Row>
-            <RB.Row stye={{color: "white"}}><h3>©</h3></RB.Row>
-            </RB.Container>
           </RB.Col>
           </RB.Row>
         </RB.Container>
+        </div>
     </React.Fragment>
   )
 }
